@@ -3,14 +3,19 @@ import { Column, Row } from 'simple-flexbox'
 
 import { defnTypes, defnColFlexes } from '../constants'
 
+import { selectDefnType } from '../actions'
+
 import DefnIdC from '../containers/DefnIdC'
-import DefnTypeC from '../containers/DefnTypeC'
-import DefnCmptMixC from '../containers/DefnCmptMixC'
+import PicklistC from '../containers/PicklistC'
+import CmptGenC from '../containers/CmptGenC'
+import CmptMixC from '../containers/CmptMixC'
 
 const chooseRow = (defnType) => {
   switch (defnType) {
+    case defnTypes[0]:
+      return <CmptGenC />
     case defnTypes[1]:
-      return <DefnCmptMixC />
+      return <CmptMixC />
     default:
       return (
         <Column flex={defnColFlexes[2]} horizontal='center' style={{ border: '2px lightgreen dashed'}}>
@@ -26,7 +31,12 @@ const DefnRow = ({ defnId, defnType }) => (
       <DefnIdC defnId={defnId} />
     </Column>
     <Column flex={defnColFlexes[1]} horizontal='center' style={{ border: '2px tomato dashed'}}>
-      <DefnTypeC defnId={defnId} defnType={defnType} />
+      <PicklistC
+        id={defnId}
+        currentValue={defnType}
+        picklistValues={defnTypes}
+        onChange = {selectDefnType}
+      />
     </Column>
     { chooseRow(defnType) }
   </Row>
