@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DefnId = ({ defnId }) => (
+const DefnId = ({defnId}) => (
   <span>{defnId}</span>
 )
 

@@ -10,12 +10,12 @@ import PicklistC from '../containers/PicklistC'
 import CmptGenC from '../containers/CmptGenC'
 import CmptMixC from '../containers/CmptMixC'
 
-const chooseRow = (defnType) => {
-  switch (defnType) {
-    case defnTypes[0]:
-      return <CmptGenC />
+const chooseRowComponent = row => {
+  switch (row.defnType) {
     case defnTypes[1]:
-      return <CmptMixC />
+      return <CmptGenC row={row} />
+    case defnTypes[2]:
+      return <CmptMixC row={row} />
     default:
       return (
         <Column flex={defnColFlexes[2]} horizontal='center' style={{ border: '2px lightgreen dashed'}}>
@@ -25,20 +25,20 @@ const chooseRow = (defnType) => {
   }
 }
 
-const DefnRow = ({ defnId, defnType }) => (
+const DefnRow = ({row}) => (
   <Row style={{ border: '2px green solid'}}>
     <Column flex={defnColFlexes[0]} horizontal='center' style={{ border: '2px brown dashed'}}>
-      <DefnIdC defnId={defnId} />
+      <DefnIdC defnId={row.defnId} />
     </Column>
     <Column flex={defnColFlexes[1]} horizontal='center' style={{ border: '2px tomato dashed'}}>
       <PicklistC
-        id={defnId}
-        currentValue={defnType}
-        picklistValues={defnTypes}
+        id = {row.defnId}
+        currentValue = {row.defnType}
+        picklistValues = {defnTypes}
         onChange = {selectDefnType}
       />
     </Column>
-    { chooseRow(defnType) }
+    {chooseRowComponent(row)}
   </Row>
 )
 

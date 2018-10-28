@@ -6,17 +6,20 @@ const defnTable = (state = [], action) => {
   console.log(state)
   console.log(action)
 
+  if (action.type.substr(0,4) === 'ROW_') return state.map(
+    dRow => (dRow.defnId === action.defnId) ? defnRow(dRow, action) : dRow
+  )
+
   switch (action.type) {
     case 'ADD_DEFN':
       return [
         ...state,
         defnRow(undefined, action)
       ]
-    case 'SELECT_DEFN_TYPE':
-      return state.map( dRow => (dRow.defnId === action.defnId) ? defnRow(dRow, action) : dRow )
     default:
       return state
   }
+
 }
 
 export default defnTable

@@ -2,7 +2,7 @@ import React from 'react'
 
 let nextKey = 0;
 
-const Picklist = ({ picklistValues, currentValue, onChange }) => (
+const Picklist = ({picklistValues, currentValue, onChange}) => (
   <div>
     {nextKey}&nbsp;
   <select

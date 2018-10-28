@@ -5,16 +5,13 @@ import { defnColFlexes } from '../constants'
 
 const CmptMix = () => (
 
-  <Column flex={defnColFlexes[2]} style={{ border: '2px lightgreen dashed'}}>
-    <Row style={{ border: '2px pink solid'}}>
-      <Column flex='2' horizontal='center' style={{ border: '2px black solid'}}>
+  <Column flex={defnColFlexes[2]} style={{ border: '2px lightblue dashed'}}>
+    <Row style={{ border: '2px yellow solid'}}>
+      <Column flex='2' horizontal='center' style={{ border: '2px brown solid'}}>
         This is a mix component!
       </Column>
-      <Column flex='3' horizontal='center' style={{ border: '2px grey solid'}}>
-        <p>This is another mix component!</p>
-      </Column>
-      <Column flex='1' horizontal='center' style={{ border: '2px grey solid'}}>
-        <p>3rd  mix cmpt...</p>
+      <Column flex='3' horizontal='center' style={{ border: '2px turquoise solid'}}>
+      <p>This mix component 2!</p>
       </Column>
     </Row>
   </Column>

@@ -3,7 +3,7 @@ import { Column, Row } from 'simple-flexbox'
 
 import { defnColFlexes } from '../constants'
 
-const DefnTableFooter = ({ addDefn, doNothing }) => (
+const DefnTableFooter = ({addDefn, doNothing}) => (
   <Row style={{ border: '2px cyan dashed'}}>
     <Column flex={defnColFlexes[0]} horizontal='center' style={{ border: '2px yellow solid'}} >
       <button onClick={addDefn}>

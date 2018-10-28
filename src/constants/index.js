@@ -1,7 +1,11 @@
 export const startingDefnId = 100
 
 export const defnTypes = [
-  'Generate Wave', 'Mix', 'Undefined type'
+  'Do Nothing', 'Generate Wave', 'Mix'
+]
+
+export const waveTypes = [
+  'Triangle', 'Square', 'Sawtooth', 'Sine'
 ]
 
 // export const defnTypes = [

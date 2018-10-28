@@ -13,7 +13,13 @@ export const addDefn = () => ({
 })
 
 export const selectDefnType = (defnId, defnType) => ({
-  type: 'SELECT_DEFN_TYPE',
+  type: 'ROW_SELECT_DEFN_TYPE',
   defnId,
   defnType
+})
+
+export const selectWaveType = (defnId, waveType) => ({
+  type: 'ROW_SELECT_WAVE_TYPE',
+  defnId,
+  waveType
 })
