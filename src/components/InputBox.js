@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Numeric = ({id, preLabel, postLabel, currentValue, onChange, widthPx='80px'}) => (
+const InputBox = ({id, preLabel, postLabel, currentValue, onChange, type='text', widthPx='80px'}) => (
   <span>
     <label>
       {preLabel}
@@ -9,7 +9,7 @@ const Numeric = ({id, preLabel, postLabel, currentValue, onChange, widthPx='80px
     <input
       defaultValue = {currentValue}
       onBlur = {onChange}
-      type = 'number'
+      type = {type}
       style = {{textAlign: 'right', width: widthPx}}
     />
     &nbsp;
@@ -17,7 +17,7 @@ const Numeric = ({id, preLabel, postLabel, currentValue, onChange, widthPx='80px
   </span>
 )
 
-export default Numeric
+export default InputBox 
 
 
 // onBlur fires when input box has lost focus, e.g. Enter key is pressed,

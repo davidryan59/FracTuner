@@ -30,8 +30,14 @@ const defnRow = (state = {}, action) => {
     case 'SETTYPE':
       return {
         defnId: action.defnId,
+        defnLabel: '',
         defnType: action.defnType,
-        ...getInitialState(action.defnId, action.defnType)
+        ...getInitialState(action.defnId, action.defnType || state.defnType)
+      }
+    case 'SETLABEL':
+      return {
+        ...state,
+        defnLabel: action.defnLabel,
       }
     default:
       return state

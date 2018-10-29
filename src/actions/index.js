@@ -13,6 +13,23 @@ export const addDefn = () => ({
   defnType: defnTypes[0]
 })
 
+export const dupDefn = ({defnId}) => ({
+  type: 'DUP_DEFN',
+  defnId,
+  newDefnId: nextDefnId++
+})
+
+export const delDefn = ({defnId}) => ({
+  type: 'DEL_DEFN',
+  defnId
+})
+
+export const setLabel = ({defnId, newValue}) => ({
+  type: 'ROW_SETLABEL',
+  defnId,
+  defnLabel: newValue
+})
+
 export const selectDefnType = ({defnId, newValue}) => ({
   type: 'ROW_SETTYPE',
   defnId,

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 
-import Numeric from '../components/Numeric'
+import InputBox from '../components/InputBox'
 
 const mapStateToProps = (state, ownProps) => ({
 })
@@ -12,4 +12,5 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Numeric)
+)(InputBox)
+ 

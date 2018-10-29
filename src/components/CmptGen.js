@@ -1,14 +1,14 @@
 import React from 'react'
 import { Column, Row } from 'simple-flexbox'
 
-import { defnColFlexes, waveTypes } from '../constants'
+import { waveTypes } from '../constants'
 import { selectWaveType, selectWaveLen, selectWaveFreq } from '../actions'
 import PicklistC from '../containers/PicklistC'
-import NumericC from '../containers/NumericC'
+import InputBoxC from '../containers/InputBoxC'
 
-const CmptGen = ({row}) => (
+const CmptGen = ({row, flex}) => (
 
-  <Column flex={defnColFlexes[2]} style={{ border: '2px lightgreen dashed'}}>
+  <Column flex={flex} vertical='center' style={{ border: '2px lightgreen dashed'}}>
     <Row style={{ border: '2px pink solid'}}>
       <Column flex='2' horizontal='center' style={{ border: '2px black solid'}}>
         <PicklistC
@@ -20,8 +20,9 @@ const CmptGen = ({row}) => (
         />
       </Column>
       <Column flex='3' horizontal='center' style={{ border: '2px grey solid'}}>
-        <NumericC
+        <InputBoxC
           defnId = {row.defnId}
+          type = 'number'
           preLabel = 'Length'
           widthPx = '60px'
           postLabel = '(ms)'
@@ -30,8 +31,9 @@ const CmptGen = ({row}) => (
         />
       </Column>
       <Column flex='3' horizontal='center' style={{ border: '2px yellow solid'}}>
-        <NumericC
+        <InputBoxC
           defnId = {row.defnId}
+          type = 'number'
           preLabel = 'Freq'
           postLabel = '(Hz)'
           currentValue = {row.waveFreq}
