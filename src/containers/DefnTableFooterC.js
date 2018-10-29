@@ -1,6 +1,7 @@
 import { connect } from 'react-redux'
 
 import DefnTableFooter from '../components/DefnTableFooter'
+
 import { addDefn, doNothing } from '../actions'
 
 const mapStateToProps = (state, ownProps) => ({

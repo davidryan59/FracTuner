@@ -3,8 +3,6 @@ import { connect } from 'react-redux'
 import Picklist from '../components/Picklist'
 
 const mapStateToProps = (state, ownProps) => ({
-  currentValue: ownProps.currentValue,
-  picklistValues: ownProps.picklistValues
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
