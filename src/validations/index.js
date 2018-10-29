@@ -8,6 +8,8 @@ const boundNum = (numInTextForm, min, max, decimalPlaces, defaultVal) => {
   return (Number.isInteger(roundedNum)) ? roundedNum : roundedNumStr
 }
 
-export const validateWaveLen = numInTextForm => boundNum(numInTextForm, 1, 10000, 0, 300)
+export const validateWaveLen = numInTextForm => boundNum(numInTextForm, 1, 9999, 0, 300)
 
-export const validateWaveFreq = numInTextForm => boundNum(numInTextForm, 1, 10000, 2, 256)
+export const validateWaveFreq = numInTextForm => boundNum(numInTextForm, 1, 9999, 3, 256)
+
+export const validateMixChildDefnId = numInTextForm => boundNum(numInTextForm, 0, 9999, 0, 0)

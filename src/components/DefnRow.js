@@ -32,7 +32,7 @@ const DefnRow = ({row}) => (
     </Column>
     <Column flex={defnColFlexes[1]} horizontal='center' vertical='center' style={{ border: '2px tomato dashed'}}>
       <PicklistC
-        id = {row.defnId}
+        defnId = {row.defnId}
         currentValue = {row.defnType}
         picklistValues = {defnTypes}
         onChange = {selectDefnType}

@@ -1,18 +1,49 @@
 import React from 'react'
 import { Column, Row } from 'simple-flexbox'
 
-import { defnColFlexes } from '../constants'
+import { defnColFlexes, maxMixSize } from '../constants'
+import { selectMix } from '../actions'
+import NumericC from '../containers/NumericC'
 
-const CmptMix = ({row}) => (
+let nextKey = 0;
 
-  <Column flex={defnColFlexes[2]} style={{ border: '2px lightblue dashed'}}>
-    <Row style={{ border: '2px yellow solid'}}>
-      <Column flex='2' horizontal='center' style={{ border: '2px brown solid'}}>
-        This is a mix component!
+const CmptMix = ({row, addMix, delMix}) => (
+
+  <Column flex={defnColFlexes[2]} style={{ border: '2px lightgreen dashed'}}>
+    <Row style={{ border: '2px pink solid'}}>
+      {(row.mixes.length >= maxMixSize) ? '' : (
+          <Column horizontal='center' vertical='center' style={{ border: '2px yellow solid'}} >
+            <button onClick={addMix}>
+              +
+            </button>
+          </Column>
+        )
+      }
+      <Column flex='10' style={{ border: '2px grey solid'}}>
+        <Row>
+        {row.mixes.map( mix =>
+            <Column flex='1' key={nextKey++} horizontal='center' style={{ border: '2px yellow solid'}}>
+              {mix.mixId}
+              <NumericC
+                defnId = {row.defnId}
+                mixId = {mix.mixId}
+                preLabel = 'Id'
+                widthPx = '50px'
+                currentValue = {mix.childDefnId}
+                onChange = {selectMix}
+              />
+            </Column>
+        )}
+        </Row>
       </Column>
-      <Column flex='3' horizontal='center' style={{ border: '2px turquoise solid'}}>
-      <p>This mix component 2!</p>
-      </Column>
+      {(row.mixes.length < 3) ? '' : (
+          <Column horizontal='center' vertical='center' style={{ border: '2px yellow solid'}} >
+            <button onClick={delMix}>
+              -
+            </button>
+          </Column>
+        )
+      }
     </Row>
   </Column>
 

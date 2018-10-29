@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Numeric = ({id, preLabel, postLabel, currentValue, onChange}) => (
+const Numeric = ({id, preLabel, postLabel, currentValue, onChange, widthPx='80px'}) => (
   <span>
     <label>
       {preLabel}
@@ -10,7 +10,7 @@ const Numeric = ({id, preLabel, postLabel, currentValue, onChange}) => (
       defaultValue = {currentValue}
       onBlur = {onChange}
       type = 'number'
-      style = {{textAlign: 'right', width:'80px'}}
+      style = {{textAlign: 'right', width: widthPx}}
     />
     &nbsp;
     {postLabel}

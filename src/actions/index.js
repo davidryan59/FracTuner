@@ -1,6 +1,7 @@
-import { startingDefnId, defnTypes } from '../constants'
+import { startingIdValue, defnTypes } from '../constants'
 
-let nextDefnId = startingDefnId
+let nextDefnId = startingIdValue
+let nextMixId = startingIdValue
 
 export const doNothing = () => ({
   type: 'DO_NOTHING',
@@ -12,26 +13,47 @@ export const addDefn = () => ({
   defnType: defnTypes[0]
 })
 
-export const selectDefnType = (defnId, defnType) => ({
+export const selectDefnType = ({defnId, newValue}) => ({
   type: 'ROW_SETTYPE',
   defnId,
-  defnType
+  defnType: newValue
 })
 
-export const selectWaveType = (defnId, waveType) => ({
+export const selectWaveType = ({defnId, newValue}) => ({
   type: 'ROW_GENWAVE_SETTYPE',
   defnId,
-  waveType
+  waveType: newValue
 })
 
-export const selectWaveLen = (defnId, waveLen) => ({
+export const selectWaveLen = ({defnId, newValue}) => ({
   type: 'ROW_GENWAVE_SETLEN',
   defnId,
-  waveLen
+  waveLen: newValue
 })
 
-export const selectWaveFreq = (defnId, waveFreq) => ({
+export const selectWaveFreq = ({defnId, newValue}) => ({
   type: 'ROW_GENWAVE_SETFREQ',
   defnId,
-  waveFreq
+  waveFreq: newValue
+})
+
+export const addMix = ({defnId}) => ({
+  type: 'ROW_MIX_ADD',
+  defnId: defnId,
+  mixId: nextMixId++,
+  childDefnId: defnId
+})
+// IMPROVE: childDefnId usually ought to be a valid earlier defnId,
+// not the same one.
+
+export const delMix = ({defnId}) => ({
+  type: 'ROW_MIX_DEL',
+  defnId: defnId,
+})
+
+export const selectMix = ({defnId, mixId, newValue}) => ({
+  type: 'ROW_MIX_N_SET',
+  defnId,
+  mixId,
+  childDefnId: newValue
 })

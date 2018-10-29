@@ -6,7 +6,7 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  onChange: e => dispatch(ownProps.onChange(ownProps.id, e.target.value))
+  onChange: e => dispatch(ownProps.onChange({...ownProps, newValue: e.target.value}))
 })
 
 export default connect(

@@ -1,5 +1,6 @@
-import { initialRowStateFromDefnType } from '../constants'
+import { getInitialState } from '../initialisation'
 import cmptGenWave from './cmptGenWave'
+import cmptMix from './cmptMix'
 
 const defnRow = (state = {}, action) => {
 
@@ -7,20 +8,30 @@ const defnRow = (state = {}, action) => {
   console.log(state)
   console.log(action)
 
-  const prefix = 'GENWAVE_'
-  const lenP = prefix.length
+  let prefix = null
+  let lenP = null
+
+  prefix = 'GENWAVE_'
+  lenP = prefix.length
   if (action.type.substr(0,lenP) === prefix) {
     const newAction = {...action, type: action.type.substr(lenP)}
     return cmptGenWave(state, newAction)
+  }
+
+  prefix = 'MIX_'
+  lenP = prefix.length
+  if (action.type.substr(0,lenP) === prefix) {
+    const newAction = {...action, type: action.type.substr(lenP)}
+    return cmptMix(state, newAction)
   }
 
   switch (action.type) {
     case 'ADD_DEFN':
     case 'SETTYPE':
       return {
-        ...initialRowStateFromDefnType[action.defnType],
         defnId: action.defnId,
-        defnType: action.defnType
+        defnType: action.defnType,
+        ...getInitialState(action.defnId, action.defnType)
       }
     default:
       return state

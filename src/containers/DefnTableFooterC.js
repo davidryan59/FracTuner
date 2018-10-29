@@ -8,8 +8,8 @@ const mapStateToProps = (state, ownProps) => ({
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  addDefn: id => dispatch(addDefn(id)),
-  doNothing: id => dispatch(doNothing())
+  addDefn: () => dispatch(addDefn()),
+  doNothing: () => dispatch(doNothing())
 })
 
 export default connect(

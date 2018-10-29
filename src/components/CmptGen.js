@@ -12,7 +12,7 @@ const CmptGen = ({row}) => (
     <Row style={{ border: '2px pink solid'}}>
       <Column flex='2' horizontal='center' style={{ border: '2px black solid'}}>
         <PicklistC
-          id = {row.defnId}
+          defnId = {row.defnId}
           preLabel = 'Type'
           currentValue = {row.waveType}
           picklistValues = {waveTypes}
@@ -21,8 +21,9 @@ const CmptGen = ({row}) => (
       </Column>
       <Column flex='3' horizontal='center' style={{ border: '2px grey solid'}}>
         <NumericC
-          id = {row.defnId}
+          defnId = {row.defnId}
           preLabel = 'Length'
+          widthPx = '60px'
           postLabel = '(ms)'
           currentValue = {row.waveLen}
           onChange = {selectWaveLen}
@@ -30,7 +31,7 @@ const CmptGen = ({row}) => (
       </Column>
       <Column flex='3' horizontal='center' style={{ border: '2px yellow solid'}}>
         <NumericC
-          id = {row.defnId}
+          defnId = {row.defnId}
           preLabel = 'Freq'
           postLabel = '(Hz)'
           currentValue = {row.waveFreq}
