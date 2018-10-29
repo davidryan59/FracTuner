@@ -18,7 +18,7 @@ const chooseRowComponent = row => {
       return <CmptMixC row={row} />
     default:
       return (
-        <Column flex={defnColFlexes[2]} horizontal='center' style={{ border: '2px lightgreen dashed'}}>
+        <Column flex={defnColFlexes[2]} horizontal='center' vertical='center' style={{ border: '2px lightgreen dashed'}}>
           'UNDEFINED COMPONENT'
         </Column>
       )
@@ -27,10 +27,10 @@ const chooseRowComponent = row => {
 
 const DefnRow = ({row}) => (
   <Row style={{ border: '2px green solid'}}>
-    <Column flex={defnColFlexes[0]} horizontal='center' style={{ border: '2px brown dashed'}}>
+    <Column flex={defnColFlexes[0]} horizontal='center' vertical='center' style={{ border: '2px brown dashed'}}>
       <DefnIdC defnId={row.defnId} />
     </Column>
-    <Column flex={defnColFlexes[1]} horizontal='center' style={{ border: '2px tomato dashed'}}>
+    <Column flex={defnColFlexes[1]} horizontal='center' vertical='center' style={{ border: '2px tomato dashed'}}>
       <PicklistC
         id = {row.defnId}
         currentValue = {row.defnType}

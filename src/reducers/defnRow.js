@@ -1,26 +1,26 @@
-const defaultStateToOverwrite = {
-  defnId: -1,
-  defnType: "UNDEFINED_TYPE"
-}
+import { initialRowStateFromDefnType } from '../constants'
+import cmptGenWave from './cmptGenWave'
 
-const defnRow = (state = defaultStateToOverwrite, action) => {
+const defnRow = (state = {}, action) => {
+
+  // DEBUG
+  console.log(state)
+  console.log(action)
+
+  const prefix = 'GENWAVE_'
+  const lenP = prefix.length
+  if (action.type.substr(0,lenP) === prefix) {
+    const newAction = {...action, type: action.type.substr(lenP)}
+    return cmptGenWave(state, newAction)
+  }
 
   switch (action.type) {
     case 'ADD_DEFN':
+    case 'SETTYPE':
       return {
-        ...state,
+        ...initialRowStateFromDefnType[action.defnType],
         defnId: action.defnId,
         defnType: action.defnType
-      }
-    case 'ROW_SELECT_DEFN_TYPE':
-      return {
-        ...state,
-        defnType: action.defnType
-      }
-    case 'ROW_SELECT_WAVE_TYPE':
-      return {
-        ...state,
-        waveType: action.waveType
       }
     default:
       return state

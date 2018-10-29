@@ -13,13 +13,25 @@ export const addDefn = () => ({
 })
 
 export const selectDefnType = (defnId, defnType) => ({
-  type: 'ROW_SELECT_DEFN_TYPE',
+  type: 'ROW_SETTYPE',
   defnId,
   defnType
 })
 
 export const selectWaveType = (defnId, waveType) => ({
-  type: 'ROW_SELECT_WAVE_TYPE',
+  type: 'ROW_GENWAVE_SETTYPE',
   defnId,
   waveType
+})
+
+export const selectWaveLen = (defnId, waveLen) => ({
+  type: 'ROW_GENWAVE_SETLEN',
+  defnId,
+  waveLen
+})
+
+export const selectWaveFreq = (defnId, waveFreq) => ({
+  type: 'ROW_GENWAVE_SETFREQ',
+  defnId,
+  waveFreq
 })

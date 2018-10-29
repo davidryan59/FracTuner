@@ -3,7 +3,7 @@ import { Column, Row } from 'simple-flexbox'
 
 import { defnColFlexes } from '../constants'
 
-const CmptMix = () => (
+const CmptMix = ({row}) => (
 
   <Column flex={defnColFlexes[2]} style={{ border: '2px lightblue dashed'}}>
     <Row style={{ border: '2px yellow solid'}}>
