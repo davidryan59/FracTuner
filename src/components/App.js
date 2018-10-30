@@ -2,6 +2,7 @@ import React from 'react'
 
 import DefnTableC from '../containers/DefnTableC'
 import StateEditorC from '../containers/StateEditorC'
+import UndoRedoC from '../containers/UndoRedoC'
 
 // DEBUG ONLY
 import DefnTableFooterC from '../containers/DefnTableFooterC'
@@ -15,6 +16,7 @@ const App = () => (
     <span>(Temp copy of buttons)</span>
     <p></p>
 
+    <UndoRedoC />
     <DefnTableC />
     <StateEditorC />
   </div>

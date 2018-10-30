@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import DefnTableBody from '../components/DefnTableBody'
 
 const mapStateToProps = (state, ownProps) => ({
-  defnTable: state.defnTable
+  defnTable: state.present.defnTable
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

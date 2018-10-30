@@ -17,7 +17,7 @@ const StateEditor = ({stateJSON}) => (
     }}
   >
     <Row>
-      <b>State:</b>&nbsp;&nbsp;{stateJSON}
+      <b>state.present</b>:&nbsp;&nbsp;{stateJSON}
     </Row>
   </Column>
 
