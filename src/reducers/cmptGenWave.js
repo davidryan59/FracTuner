@@ -2,9 +2,6 @@ import { validateWaveLen, validateWaveFreq } from '../validations'
 
 const cmptGenWave = (state, action) => {
 
-  // DEBUG
-  console.log(action)
-
   switch (action.type) {
     case 'SETTYPE':
       return {

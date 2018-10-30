@@ -2,10 +2,6 @@ import { validateMixChildDefnId } from '../validations'
 
 const cmptMixN = (state, action) => {
 
-  // DEBUG
-  console.log(state)
-  console.log(action)
-
   switch (action.type) {
     case 'SET':
       return {

@@ -4,15 +4,13 @@ import cmptMixN from './cmptMixN'
 
 const cmptMix = (state, action) => {
 
-  // DEBUG
-  console.log(action)
-
   let prefix = null
   let lenP = null
+  const lenT = action.type.length
 
   prefix = 'N_'
   lenP = prefix.length
-  if (action.type.substr(0,lenP) === prefix) {
+  if (lenP<lenT && action.type.substr(0,lenP) === prefix) {
     const newAction = {...action, type: action.type.substr(lenP)}
     return {
       ...state,

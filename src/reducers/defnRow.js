@@ -5,23 +5,20 @@ import cmptMix from './cmptMix'
 
 const defnRow = (state = {}, action) => {
 
-  // DEBUG
-  console.log(state)
-  console.log(action)
-
   let prefix = null
   let lenP = null
+  const lenT = action.type.length
 
   prefix = 'GENWAVE_'
   lenP = prefix.length
-  if (action.type.substr(0,lenP) === prefix) {
+  if (lenP<lenT && action.type.substr(0,lenP) === prefix) {
     const newAction = {...action, type: action.type.substr(lenP)}
     return cmptGenWave(state, newAction)
   }
 
   prefix = 'MIX_'
   lenP = prefix.length
-  if (action.type.substr(0,lenP) === prefix) {
+  if (lenP<lenT && action.type.substr(0,lenP) === prefix) {
     const newAction = {...action, type: action.type.substr(lenP)}
     return cmptMix(state, newAction)
   }
