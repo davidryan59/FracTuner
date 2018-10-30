@@ -54,7 +54,7 @@ const DefnRow = ({row, dupDefn, delDefn}) => (
           D
         </button>
         <button onClick={delDefn}>
-          -
+          –
         </button>
       </Row>
     </Column>

@@ -36,7 +36,7 @@ const CmptMix = ({row, flex, addMix, delMix}) => (
       {(row.mixes.length < 3) ? '' : (
           <Column className='tableSubCell' horizontal='center' vertical='center'>
             <button onClick={delMix}>
-              -
+              –
             </button>
           </Column>
         )

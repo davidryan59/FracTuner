@@ -18,7 +18,7 @@ const DefnTableHeader = () => (
       Detail
     </Column>
     <Column className='headerCell' flex={defnColFlexes[4]} horizontal='center'>
-      &nbsp;
+      Actions
     </Column>
   </Row>
 )
