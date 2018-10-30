@@ -27,19 +27,17 @@ const CmptGen = ({row, flex}) => (
           onChange = {selectWaveLen}
         />
       </Column>
-      <Column
-        className='tableSubCell'
-        flex='3'
-        horizontal='center'
-        style={{display: (row.waveType==='Silence') ? 'none' : 'inline'}}
-      >
-        <InputBoxC
-          defnId = {row.defnId}
-          preLabel = 'Freq'
-          currentValue = {row.waveFreq}
-          onChange = {selectWaveFreq}
-        />
-      </Column>
+      {(row.waveType==='Silence') ? null : (
+          <Column className='tableSubCell' flex='3' horizontal='center'>
+            <InputBoxC
+              defnId = {row.defnId}
+              preLabel = 'Freq'
+              currentValue = {row.waveFreq}
+              onChange = {selectWaveFreq}
+            />
+          </Column>
+        )
+      }
     </Row>
   </Column>
 

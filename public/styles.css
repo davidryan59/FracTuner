@@ -15,6 +15,19 @@ button {
   font-weight: normal;
 }
 
+.title {
+  padding: 2px;
+  text-align: center;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 12px;
+  font-style: italic;
+}
+
 .app {
   margin: 5px;
   border: 1px #999 solid;
@@ -24,8 +37,7 @@ button {
 }
 
 .buttonBar {
-  border: 1px pink dotted;
-  margin: 5px 0px;
+  margin: 10px 0px;
 }
 
 .buttonCell {
@@ -65,7 +77,7 @@ button {
 }
 
 .tableSubPad {
-  margin: 3px;
+  margin: 4px;
   border: 0.5px #E6E0D3 solid;
   border-radius: 2px;
 }
@@ -74,6 +86,7 @@ button {
 }
 
 .tableSubCell {
+  padding: 1px;
   border: 0.5px #F6F0E0 solid;
   background: #FFFAE0;
 }

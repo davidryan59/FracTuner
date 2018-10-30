@@ -5,7 +5,6 @@ import { Column, Row } from 'simple-flexbox'
 // import { directEditState } from '../actions'
 
 const StateEditor = ({stateJSON}) => (
-
   <Column
     horizontal = 'center'
     vertical = 'center'
@@ -20,7 +19,6 @@ const StateEditor = ({stateJSON}) => (
       <b>state.present</b>:&nbsp;&nbsp;{stateJSON}
     </Row>
   </Column>
-
 )
 
 export default StateEditor

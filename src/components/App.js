@@ -6,8 +6,8 @@ import DefnTableButtonBarC from '../containers/DefnTableButtonBarC'
 
 const App = () => (
   <div className='app'>
-    <h1 style={{textAlign: 'center'}}>FracTuner</h1>
-    <p style={{textAlign: 'center', fontStyle: 'italic'}}>Iteratively create musical sounds</p>
+    <div className='title'>FracTuner</div>
+    <div className='subtitle'>Iteratively create musical sounds</div>
     <DefnTableButtonBarC />
     <DefnTableC />
     <DefnTableButtonBarC />
