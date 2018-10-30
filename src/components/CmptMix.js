@@ -2,7 +2,7 @@ import React from 'react'
 import { Column, Row } from 'simple-flexbox'
 
 import { maxMixSize } from '../constants'
-import { selectMix } from '../actions'
+import { setMix } from '../actions'
 import InputBoxC from '../containers/InputBoxC'
 
 let nextKey = 0
@@ -27,7 +27,7 @@ const CmptMix = ({row, flex, addMix, delMix}) => (
                 defnId = {row.defnId}
                 mixId = {mix.mixId}
                 currentValue = {mix.childDefnId}
-                onChange = {selectMix}
+                onChange = {setMix}
               />
             </Column>
         )}

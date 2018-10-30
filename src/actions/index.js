@@ -73,7 +73,7 @@ export const delMix = ({defnId}) => ({
   defnId: defnId,
 })
 
-export const selectMix = ({defnId, mixId, newValue}) => ({
+export const setMix = ({defnId, mixId, newValue}) => ({
   type: 'ROW_MIX_N_SET',
   defnId,
   mixId,

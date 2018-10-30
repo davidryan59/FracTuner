@@ -1,12 +1,12 @@
-const boundNum = (numInTextForm, min, max, decimalPlaces, defaultVal) => {
-  if (!isFinite(numInTextForm)) return defaultVal
-  const num = 1 * numInTextForm
-  if (num<min) return defaultVal
-  if (num>max) return defaultVal
-  const roundedNumStr = num.toFixed(decimalPlaces)   // String!
-  const roundedNum = 1 * roundedNumStr
-  return (Number.isInteger(roundedNum)) ? roundedNum : roundedNumStr
-}
+// const boundNum = (numInTextForm, min, max, decimalPlaces, defaultVal) => {
+//   if (!isFinite(numInTextForm)) return defaultVal
+//   const num = 1 * numInTextForm
+//   if (num<min) return defaultVal
+//   if (num>max) return defaultVal
+//   const roundedNumStr = num.toFixed(decimalPlaces)   // String!
+//   const roundedNum = 1 * roundedNumStr
+//   return (Number.isInteger(roundedNum)) ? roundedNum : roundedNumStr
+// }
 
 // Previous validations were for numeric only. Now want to be able to use text too.
 //

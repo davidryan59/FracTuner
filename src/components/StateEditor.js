@@ -1,8 +1,8 @@
 import React from 'react'
 import { Column, Row } from 'simple-flexbox'
 
-import InputBoxC from '../containers/InputBoxC'
-import { directEditState } from '../actions'
+// import InputBoxC from '../containers/InputBoxC'
+// import { directEditState } from '../actions'
 
 const StateEditor = ({stateJSON}) => (
 

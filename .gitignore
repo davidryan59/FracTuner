@@ -9,6 +9,6 @@ build
 # misc
 .DS_Store
 npm-debug.log
-
+coverage
 removed
 devnotes.md
