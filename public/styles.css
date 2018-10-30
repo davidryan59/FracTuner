@@ -1,1 +1,79 @@
+body {
+  font-family: sans-serif;
+  font-size: 10px;
+  color: #420;
+  margin: 0px;
+  background-color: #FFF6DD;
+}
 
+button {
+  color: #06B;
+  font-weight: bold;
+}
+
+.textButton {
+  font-weight: normal;
+}
+
+.app {
+  margin: 5px;
+  border: 1px #999 solid;
+  border-radius: 10px;
+  background: #FFFFF6;
+  padding: 7px;
+}
+
+.buttonBar {
+  border: 1px pink dotted;
+  margin: 5px 0px;
+}
+
+.buttonCell {
+}
+
+.stateEditor {
+  border: 1px #ABF solid;
+  border-radius: 7px;
+}
+
+.mainTable {
+  border: 1px #000 solid;
+  border-radius: 3px;
+}
+
+.tableHeader {
+  font-weight: bold;
+  font-size: 11px;
+  background: #FFFFDD;
+}
+
+.headerCell {
+  border: 1px #BBB solid;
+  padding: 3px 0px;
+}
+
+.tableBody {
+  background: #FFFFEE;
+}
+
+.tableRow {
+  border-top: 1px #777 solid;
+}
+
+.tableCell {
+  border: 1px #BBB solid;
+}
+
+.tableSubPad {
+  margin: 3px;
+  border: 0.5px #E6E0D3 solid;
+  border-radius: 2px;
+}
+
+.tableSubCellGroup {
+}
+
+.tableSubCell {
+  border: 0.5px #F6F0E0 solid;
+  background: #FFFAE0;
+}

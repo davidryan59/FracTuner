@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 
-import DefnTableFooter from '../components/DefnTableFooter'
+import DefnTableButtonBar from '../components/DefnTableButtonBar'
 
 import { addDefn, doNothing } from '../actions'
 
@@ -15,4 +15,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(DefnTableFooter)
+)(DefnTableButtonBar)

@@ -20,26 +20,26 @@ const chooseRowComponent = row => {
       return <CmptMixC row={row} flex={flex} />
     default:
       return (
-        <Column flex={flex} horizontal='center' vertical='center' style={{ border: '2px lightgreen dashed'}}>
-          'UNDEFINED COMPONENT'
+        <Column className='tableCell' flex={flex} horizontal='center' vertical='center'>
+          &nbsp;
         </Column>
       )
   }
 }
 
 const DefnRow = ({row, dupDefn, delDefn}) => (
-  <Row style={{ border: '2px green solid'}}>
-    <Column flex={defnColFlexes[0]} horizontal='center' vertical='center' style={{ border: '2px brown dashed'}}>
+  <Row className='tableRow'>
+    <Column className='tableCell' flex={defnColFlexes[0]} horizontal='center' vertical='center'>
       <DefnIdC defnId={row.defnId} />
     </Column>
-    <Column flex={defnColFlexes[1]} horizontal='center' vertical='center' style={{ border: '2px darkgreen dashed'}} >
+    <Column className='tableCell' flex={defnColFlexes[1]} horizontal='center' vertical='center'>
       <InputBoxC
         defnId = {row.defnId}
         currentValue = {row.defnLabel}
         onChange = {setLabel}
       />
     </Column>
-    <Column flex={defnColFlexes[2]} horizontal='center' vertical='center' style={{ border: '2px tomato dashed'}}>
+    <Column className='tableCell' flex={defnColFlexes[2]} horizontal='center' vertical='center'>
       <PicklistC
         defnId = {row.defnId}
         currentValue = {row.defnType}
@@ -48,7 +48,7 @@ const DefnRow = ({row, dupDefn, delDefn}) => (
       />
     </Column>
     {chooseRowComponent(row)}
-    <Column flex={defnColFlexes[4]} horizontal='center' vertical='center' style={{ border: '2px orangered dashed'}}>
+    <Column className='tableCell' flex={defnColFlexes[4]} horizontal='center' vertical='center'>
       <Row>
         <button onClick={dupDefn}>
           D

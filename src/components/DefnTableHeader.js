@@ -4,20 +4,20 @@ import { Column, Row } from 'simple-flexbox'
 import { defnColFlexes } from '../constants'
 
 const DefnTableHeader = () => (
-  <Row horizontal='center' style={{border: '2px cyan dashed', fontWeight: 'bold'}}>
-    <Column flex={defnColFlexes[0]} horizontal='center' style={{ border: '2px green solid'}}>
+  <Row className='tableHeader' horizontal='center'>
+    <Column className='headerCell' flex={defnColFlexes[0]} horizontal='center'>
       Id
     </Column>
-    <Column flex={defnColFlexes[1]} horizontal='center' style={{ border: '2px green solid'}} >
+    <Column className='headerCell' flex={defnColFlexes[1]} horizontal='center'>
       Label
     </Column>
-    <Column flex={defnColFlexes[2]} horizontal='center' style={{ border: '2px cyan solid'}}>
+    <Column className='headerCell' flex={defnColFlexes[2]} horizontal='center'>
       Component
     </Column>
-    <Column flex={defnColFlexes[3]} horizontal='center' style={{ border: '2px purple solid'}}>
+    <Column className='headerCell' flex={defnColFlexes[3]} horizontal='center'>
       Detail
     </Column>
-    <Column flex={defnColFlexes[4]} horizontal='center' style={{ border: '2px pink solid'}} >
+    <Column className='headerCell' flex={defnColFlexes[4]} horizontal='center'>
       &nbsp;
     </Column>
   </Row>

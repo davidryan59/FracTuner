@@ -2,22 +2,15 @@ import React from 'react'
 
 import DefnTableC from '../containers/DefnTableC'
 import StateEditorC from '../containers/StateEditorC'
-import UndoRedoC from '../containers/UndoRedoC'
-
-// DEBUG ONLY
-import DefnTableFooterC from '../containers/DefnTableFooterC'
+import DefnTableButtonBarC from '../containers/DefnTableButtonBarC'
 
 const App = () => (
-  <div style={{ border: '2px green dashed'}}>
+  <div className='app'>
     <h1 style={{textAlign: 'center'}}>FracTuner</h1>
     <p style={{textAlign: 'center', fontStyle: 'italic'}}>Iteratively create musical sounds</p>
-
-    <DefnTableFooterC />
-    <span>(Temp copy of buttons)</span>
-    <p></p>
-
-    <UndoRedoC />
+    <DefnTableButtonBarC />
     <DefnTableC />
+    <DefnTableButtonBarC />
     <StateEditorC />
   </div>
 )

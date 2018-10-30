@@ -7,10 +7,10 @@ import { Column, Row } from 'simple-flexbox'
 const StateEditor = ({stateJSON}) => (
 
   <Column
-    horizontal='center'
-    vertical='center'
-    style={{
-      border: '2px darkgreen solid',
+    horizontal = 'center'
+    vertical = 'center'
+    className = 'stateEditor'
+    style = {{
       padding: '5px',
       fontFamily: 'monospace',
       fontSize: 9

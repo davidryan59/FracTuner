@@ -2,13 +2,11 @@ import React from 'react'
 
 import DefnTableHeaderC from '../containers/DefnTableHeaderC'
 import DefnTableBodyC from '../containers/DefnTableBodyC'
-import DefnTableFooterC from '../containers/DefnTableFooterC'
 
 const DefnTable = () => (
-  <div style={{ border: '2px tomato solid'}}>
+  <div className='mainTable'>
     <DefnTableHeaderC />
     <DefnTableBodyC />
-    <DefnTableFooterC />
   </div>
 )
 

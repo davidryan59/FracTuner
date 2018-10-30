@@ -6,7 +6,7 @@ import DefnRowC from '../containers/DefnRowC'
 let nextKey = 0
 
 const DefnTableBody = ({defnTable}) => (
-  <Column style={{ border: '2px gray dashed'}}>
+  <Column className='tableBody'>
     {defnTable.map( defnRow =>
       <DefnRowC
         key={nextKey++}

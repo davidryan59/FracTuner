@@ -9,20 +9,20 @@ let nextKey = 0
 
 const CmptMix = ({row, flex, addMix, delMix}) => (
 
-  <Column flex={flex} style={{ border: '2px lightgreen dashed'}}>
-    <Row style={{ border: '2px pink solid'}}>
+  <Column className='tableCell' flex={flex}>
+    <Row className='tableSubPad'>
       {(row.mixes.length >= maxMixSize) ? '' : (
-          <Column horizontal='center' vertical='center' style={{ border: '2px yellow solid'}} >
+          <Column className='tableSubCell' horizontal='center' vertical='center'>
             <button onClick={addMix}>
               +
             </button>
           </Column>
         )
       }
-      <Column flex='10' style={{ border: '2px grey solid'}}>
+      <Column className='tableSubCellGroup' flex='10'>
         <Row>
         {row.mixes.map( mix =>
-            <Column flex='1' key={nextKey++} horizontal='center' style={{ border: '2px lightblue solid'}}>
+            <Column className='tableSubCell' flex='1' key={nextKey++} horizontal='center'>
               <InputBoxC
                 defnId = {row.defnId}
                 mixId = {mix.mixId}
@@ -34,7 +34,7 @@ const CmptMix = ({row, flex, addMix, delMix}) => (
         </Row>
       </Column>
       {(row.mixes.length < 3) ? '' : (
-          <Column horizontal='center' vertical='center' style={{ border: '2px lightgreen solid'}} >
+          <Column className='tableSubCell' horizontal='center' vertical='center'>
             <button onClick={delMix}>
               -
             </button>
