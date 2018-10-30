@@ -1,6 +1,7 @@
 import React from 'react'
 
 import DefnTableC from '../containers/DefnTableC'
+import StateEditorC from '../containers/StateEditorC'
 
 // DEBUG ONLY
 import DefnTableFooterC from '../containers/DefnTableFooterC'
@@ -15,6 +16,7 @@ const App = () => (
     <p></p>
 
     <DefnTableC />
+    <StateEditorC />
   </div>
 )
 

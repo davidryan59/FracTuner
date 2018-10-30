@@ -8,9 +8,9 @@ import InputBoxC from '../containers/InputBoxC'
 
 const CmptGen = ({row, flex}) => (
 
-  <Column flex={flex} vertical='center' style={{ border: '2px lightgreen dashed'}}>
+  <Column flex={flex} style={{ border: '2px lightgreen dashed'}}>
     <Row style={{ border: '2px pink solid'}}>
-      <Column flex='2' horizontal='center' style={{ border: '2px black solid'}}>
+      <Column flex='2' style={{ border: '2px black solid'}}>
         <PicklistC
           defnId = {row.defnId}
           preLabel = 'Type'
@@ -22,10 +22,7 @@ const CmptGen = ({row, flex}) => (
       <Column flex='3' horizontal='center' style={{ border: '2px grey solid'}}>
         <InputBoxC
           defnId = {row.defnId}
-          type = 'number'
           preLabel = 'Length'
-          widthPx = '60px'
-          postLabel = '(ms)'
           currentValue = {row.waveLen}
           onChange = {selectWaveLen}
         />
@@ -33,9 +30,7 @@ const CmptGen = ({row, flex}) => (
       <Column flex='3' horizontal='center' style={{ border: '2px yellow solid'}}>
         <InputBoxC
           defnId = {row.defnId}
-          type = 'number'
           preLabel = 'Freq'
-          postLabel = '(Hz)'
           currentValue = {row.waveFreq}
           onChange = {selectWaveFreq}
         />

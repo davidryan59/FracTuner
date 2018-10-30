@@ -7,7 +7,7 @@ export const defnTypes = [
 ]
 
 export const waveTypes = [
-  'Triangle', 'Square', 'Sawtooth', 'Sine'
+  'Triangle', 'Square', 'Sawtooth', 'Sine', 'Silence'
 ]
 
 export const defnColFlexes = [

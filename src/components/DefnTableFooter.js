@@ -11,12 +11,12 @@ const DefnTableFooter = ({addDefn, doNothing}) => (
       </button>
     </Column>
     <Column flex={defnColFlexes[1]} horizontal='center' style={{ border: '2px green solid'}} >
-      &nbsp;
-    </Column>
-    <Column flex={defnColFlexes[2]} horizontal='center' style={{ border: '2px grey solid'}} >
       <button onClick={doNothing}>
         &nbsp;
       </button>
+    </Column>
+    <Column flex={defnColFlexes[2]} horizontal='center' style={{ border: '2px grey solid'}} >
+      &nbsp;
     </Column>
     <Column flex={defnColFlexes[3]} horizontal='center' style={{ border: '2px black solid'}} >
       &nbsp;

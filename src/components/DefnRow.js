@@ -35,8 +35,6 @@ const DefnRow = ({row, dupDefn, delDefn}) => (
     <Column flex={defnColFlexes[1]} horizontal='center' vertical='center' style={{ border: '2px darkgreen dashed'}} >
       <InputBoxC
         defnId = {row.defnId}
-        type = 'text'
-        widthPx = '70px'
         currentValue = {row.defnLabel}
         onChange = {setLabel}
       />

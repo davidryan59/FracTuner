@@ -1,23 +1,22 @@
 import React from 'react'
 
-const InputBox = ({id, preLabel, postLabel, currentValue, onChange, type='text', widthPx='80px'}) => (
-  <span>
+const InputBox = ({preLabel, postLabel, currentValue, onChange}) => (
+  <span style={{textAlign: 'center'}}>
     <label>
       {preLabel}
     </label>
-    &nbsp;
+    &nbsp;&nbsp;
     <input
       defaultValue = {currentValue}
       onBlur = {onChange}
-      type = {type}
-      style = {{textAlign: 'right', width: widthPx}}
+      style = {{width:'70%', boxSizing:'border-box', fontFamily:'monospace'}}
     />
-    &nbsp;
+    &nbsp;&nbsp;
     {postLabel}
   </span>
 )
 
-export default InputBox 
+export default InputBox
 
 
 // onBlur fires when input box has lost focus, e.g. Enter key is pressed,

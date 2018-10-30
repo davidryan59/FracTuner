@@ -8,8 +8,21 @@ const boundNum = (numInTextForm, min, max, decimalPlaces, defaultVal) => {
   return (Number.isInteger(roundedNum)) ? roundedNum : roundedNumStr
 }
 
-export const validateWaveLen = numInTextForm => boundNum(numInTextForm, 1, 9999, 0, 300)
+// Previous validations were for numeric only. Now want to be able to use text too.
+//
+// export const validateWaveLen = numInTextForm => boundNum(numInTextForm, 1, 9999, 0, 300)
+//
+// export const validateWaveFreq = numInTextForm => boundNum(numInTextForm, 1, 9999, 3, 256)
+//
+// export const validateMixChildDefnId = numInTextForm => boundNum(numInTextForm, 0, 9999, 0, 0)
 
-export const validateWaveFreq = numInTextForm => boundNum(numInTextForm, 1, 9999, 3, 256)
+export const validateRelabel = input => input
+// This needs to make sure the new label is unique.
+// If not, append random digits until it is unique!
+// Must always work, and terminate after a finite number of steps.
 
-export const validateMixChildDefnId = numInTextForm => boundNum(numInTextForm, 0, 9999, 0, 0)
+export const validateWaveLen = input => input
+
+export const validateWaveFreq = input => input
+
+export const validateMixChildDefnId = input => input

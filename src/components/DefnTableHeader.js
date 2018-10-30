@@ -4,7 +4,7 @@ import { Column, Row } from 'simple-flexbox'
 import { defnColFlexes } from '../constants'
 
 const DefnTableHeader = () => (
-  <Row horizontal='center' style={{ border: '2px cyan dashed'}}>
+  <Row horizontal='center' style={{border: '2px cyan dashed', fontWeight: 'bold'}}>
     <Column flex={defnColFlexes[0]} horizontal='center' style={{ border: '2px green solid'}}>
       Id
     </Column>

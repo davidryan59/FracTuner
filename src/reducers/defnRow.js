@@ -1,4 +1,5 @@
 import { getInitialState } from '../initialisation'
+import { validateRelabel } from '../validations'
 import cmptGenWave from './cmptGenWave'
 import cmptMix from './cmptMix'
 
@@ -30,14 +31,14 @@ const defnRow = (state = {}, action) => {
     case 'SETTYPE':
       return {
         defnId: action.defnId,
-        defnLabel: '',
+        defnLabel: validateRelabel('Label'+action.defnId),
         defnType: action.defnType,
         ...getInitialState(action.defnId, action.defnType || state.defnType)
       }
     case 'SETLABEL':
       return {
         ...state,
-        defnLabel: action.defnLabel,
+        defnLabel: validateRelabel(action.defnLabel),
       }
     default:
       return state

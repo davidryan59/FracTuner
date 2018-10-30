@@ -7,6 +7,11 @@ export const doNothing = () => ({
   type: 'DO_NOTHING',
 })
 
+export const directEditState = ({newValue}) => ({
+  type: 'DIRECT_EDIT_STATE',
+  newState: newValue
+})
+
 export const addDefn = () => ({
   type: 'ADD_DEFN',
   defnId: nextDefnId++,

@@ -23,13 +23,9 @@ const CmptMix = ({row, flex, addMix, delMix}) => (
         <Row>
         {row.mixes.map( mix =>
             <Column flex='1' key={nextKey++} horizontal='center' style={{ border: '2px lightblue solid'}}>
-              {mix.mixId}
               <InputBoxC
                 defnId = {row.defnId}
-                type = 'number'
                 mixId = {mix.mixId}
-                preLabel = 'Id'
-                widthPx = '50px'
                 currentValue = {mix.childDefnId}
                 onChange = {selectMix}
               />
