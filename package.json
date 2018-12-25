@@ -1,6 +1,11 @@
 {
   "name": "fractuner",
   "version": "0.0.1",
+  "author": {
+    "name": "David Ryan",
+    "email": "davidryan1998@hotmail.com",
+    "url": "https://github.com/davidryan59"
+  },
   "devDependencies": {
     "react-scripts": "^1.1.4"
   },
